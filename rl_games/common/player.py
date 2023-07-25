@@ -100,7 +100,7 @@ class BasePlayer(object):
             self.file_observer.start()
 
     def wait_for_checkpoint(self):
-        if self.dir_to_monitor is None:
+        if not self.evaluation or self.dir_to_monitor is None:
             return
 
         attempt = 0
